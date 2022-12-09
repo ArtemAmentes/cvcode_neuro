@@ -2,8 +2,12 @@ from flask import Flask, request, jsonify
 import traceback
 from  model import mlp
 from json_preprocessing import json_parse
-pip
+
 app = Flask(__name__)
+
+@app.route('/index', methods=['GET'])
+def indexPage():
+    return "ok", 200
 
 @app.route('/predict', methods=['POST'])
 def predict():
